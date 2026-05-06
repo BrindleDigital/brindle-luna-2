@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function() {
   jQuery('.site-header').scrollToFixed();
 });
@@ -26,7 +25,7 @@ jQuery(document).ready(function(){
 jQuery(document).ready(function(){
   AOS.init({
     disable: 'mobile',
-    delay: 600 // 300ms animation delay
+    delay: 300 // 300ms animation delay
   });
 	
 });

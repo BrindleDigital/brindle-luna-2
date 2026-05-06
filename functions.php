@@ -7,7 +7,7 @@
  */
 
 // define a constant for the child theme version
-define( 'CHILD_THEME_VERSION', '1.2' );
+define( 'CHILD_THEME_VERSION', '1.3' );
 
 /*
 * Add custom css
@@ -41,7 +41,9 @@ add_action("wp_enqueue_scripts", "brindle_enqueue_scripts");
 add_theme_support("editor-styles");
 
 
-
+function get_current_year_shortcode() {
+  return date('Y');
+}
 
 
 function available_show_breadcrumb_function()
@@ -75,6 +77,7 @@ function register_shortcodes()
 {
   add_shortcode("brindle-breadcrumb", "available_show_breadcrumb_function");
   add_shortcode("show-menu", "show_menu_list");  
+  add_shortcode("current-year", "get_current_year_shortcode");
 }
 add_action("init", "register_shortcodes");
 
